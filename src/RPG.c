@@ -17,6 +17,8 @@ typedef struct inventario{
    int municao;
    int lanterna;
    int ataduras;
+   int ouro;
+   int diamante;
 }Inventario;
 
 typedef struct Personagem{
@@ -67,5 +69,14 @@ void imprimir_palavra(char *s , int cor){
 
 
 int main(){
+    scanf()
     imprimir_palavra("meu ovo" , 12);
+    //historia 2
+    imprimir_palavra("vc entra dentro desta estrutura e decide analisar o interior dela, em busca de algo para pagar sua divida claro... ", 15)
+    if (p.inv.lanterna == 1)
+    {
+        
+    }
+    
+
 }
