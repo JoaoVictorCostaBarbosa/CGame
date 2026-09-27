@@ -9,7 +9,7 @@
 void mudar_cor(int cor) {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, cor);
-}
+};
 
 typedef struct inventario{
    int facao; //1 se tiver, 0 se nao
@@ -51,7 +51,7 @@ void mostrar_status(Personagem p){
     printf("\n Facao (6 Dano):   %s\n" , p.inv.facao ? "Sim" : "Nao");
     printf("\n Pistola (10 dano): %s (Municao: %d)\n" , p);
     
-}
+};
 
 
 
@@ -62,9 +62,9 @@ void imprimir_palavra(char *s , int cor){
     for(int i = 0 ; i < strlen(s) ; i++){
         cprintf("%c" , s[i]);
         Sleep(200);
-    }      
+    };      
     mudar_cor(7);
-}
+};
 
 
 
@@ -72,11 +72,14 @@ int main(){
     scanf()
     imprimir_palavra("meu ovo" , 12);
     //historia 2
-    imprimir_palavra("vc entra dentro desta estrutura e decide analisar o interior dela, em busca de algo para pagar sua divida claro... ", 15)
-    if (p.inv.lanterna == 1)
-    {
-        
-    }
+    imprimir_palavra("vc entra dentro desta estrutura e decide analisar o interior dela, em busca de algo para pagar sua divida claro... ", 15);
+    if (p.inv.lanterna == 1){
+        imprimir_palavra("Graças a sua lanterna, voce encontra 3 barras de ouro!" , 12);
+        p.inv.ouro += 3;
+    }else{
+        imprimir_palavra("Voce encontra 2 barras de ouro!" , 12);
+        p.inv.ouro +=2;
+    };
     
 
-}
+};
