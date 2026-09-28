@@ -19,12 +19,13 @@ int sangramento = 0; // status de sangramento toma 5 de dano por escolha em comb
 int combate = 0; // Contador de combates
 int vitoria = 1; // Vitoria = 1 Derrota = 0, usar como verificador após combate
 
-void imprimir (char * str){
-    for (int i = 0; i < strlen(str); i++){
-        printf("%s", str[i]);
-        sleep(2);
-    };
-};
+void imprimir(char *str) {
+    for (int i = 0; i < strlen(str); i++) {
+        printf("%c", str[i]);
+        fflush(stdout);
+        usleep(30000); // 30 ms por caractere
+    }
+}
 
 int main() {
     // seleção de itens iniciais
