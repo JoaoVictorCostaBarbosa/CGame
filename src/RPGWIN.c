@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include<unistd.h>
 #include<string.h>
+#include <windows.h>
 // objeto de escolha
 int escolha = 0;
 //contador esquerda
@@ -23,7 +23,7 @@ void imprimir(char *str) {
     for (int i = 0; i < strlen(str); i++) {
         printf("%c", str[i]);
         fflush(stdout);
-        usleep(30000); // 30 ms por caractere
+        Sleep(30);
     }
 }
 
